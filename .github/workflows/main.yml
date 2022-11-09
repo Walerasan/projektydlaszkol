@@ -1,22 +1,20 @@
-name: Staging deploy
+name: Deploy via ftp
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-  
 jobs:
-  build:
-    name: Build and deploy
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: multiple SSH commands
-      uses: appleboy/ssh-action@master
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD_PROJEKTYDLASZKOL }}
-        port: ${{ secrets.FTP_PORT }}
-        script: |
-          cd /home/hydrotrade/public_html/projektydlaszkolwordpress/wp-content/themes/projektydlaszkol/
-          git fetch --all
+        host: ${{secrets.FTP_SERVER}}
+        user: ${{secrets.FTP_USERNAME}}
+        password: ${secrets.FTP_PASSWORD_PROJEKTYDLASZKOL}}
+        remoteDir: "/home/hydrotrade/public_html/projektydlaszkolwordpress/wp-content/themes/projektydlaszkol/"
+        options: "--delete --asci"
