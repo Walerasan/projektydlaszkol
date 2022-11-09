@@ -1,38 +1,18 @@
-name: Build and deploy
+name: CI -> Deploy to My website
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
+    branches: [ main, development ]
 jobs:
-  build: 
-    name: Build
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-        run: npm ci
-      - name: Build dependencies
-        run: npm run build
-      - name: Archive production artifact
-        uses: actions/upload-artifact@main
+      - uses: actions/checkout@v2
+      # Here is the deployment action
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
         with:
-          name: dist
-          path: dist
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: dist
-          path: dist
-      - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        width:
           server: arcusgroup.home.pl
-          username: hydrotrade@hydrotrade.pl
+          user: hydrotrade@hydrotrade.pl
           password: ${{secret.FTP_PASSWORD_PROJEKTYDLASZKOL}}
+          local_dir: "./projektydlaszkolwordpress/wp-content/themes/projektydlaszkol/"
+          delete: "false"
