@@ -14,5 +14,5 @@ jobs:
           server: arcusgroup.home.pl
           user: hydrotrade@hydrotrade.pl
           password: ${{ secrets.FTP_PASSWORD_PROJEKTYDLASZKOL }}
-          local_dir: "./projektydlaszkolwordpress/wp-content/themes/projektydlaszkol/"
+          local_dir: "./projektydlaszkolwordpress/wp-content/themes/projektydlaszkol"
           delete: "false"
