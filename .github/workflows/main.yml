@@ -1,18 +1,16 @@
-name: CI -> Deploy to My website
-on:
-  push:
-    branches: [ main, development ]
+name: Deploy via ftp
+on: push
 jobs:
-  build:
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Here is the deployment action
-      - name: Upload from public_html via FTP
-        uses: airvzxf/ftp-deployment-action@master
-        with:
-          server: arcusgroup.home.pl
-          user: hydrotrade@hydrotrade.pl
-          password: ${{ secrets.FTP_PASSWORD_PROJEKTYDLASZKOL }}
-          local_dir: "./projektydlaszkolwordpress/wp-content/themes/projektydlaszkol"
-          delete: "false"
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remoteDir: "./projektydlaszkolwordpress/wp-content/themes/projektydlaszkol"
+        options: "--delete --asci"
