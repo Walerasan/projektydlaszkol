@@ -1,1 +1,2 @@
 # projektydlaszkol
+# Strona na Wordpress

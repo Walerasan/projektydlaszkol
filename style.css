@@ -1,0 +1,25 @@
+/*
+Theme Name: Projekty Dla Szkół
+Text Domain: ProjektyDlaSzkol
+Version: 1.0
+Tested up to: 6.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Motyw na potrzeby Strony: http://projektydlaszkol.pl
+Tags: projekty dla szkół, bilety lotnicze, tworzenie aplikacji dla sektora edukacyjnego
+Author: walerasan@gmail.com
+*/
+.menu-item {
+    padding: 10px 30px;
+    text-align: center;
+    position: relative;
+  }
+  .menu-item a{
+    color: #ffffff;
+  }
+  .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
