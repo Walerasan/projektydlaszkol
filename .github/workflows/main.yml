@@ -9,8 +9,8 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        remoteDir: "projektydlaszkolwordpress/wp-content/themes/projektydlaszkol"
+        host: ${{secrets.FTP_SERVER}}
+        user: ${{secrets.FTP_USERNAME}}
+        password: ${{secrets.FTP_PASSWORD}}
+        remoteDir: "/projektydlaszkolwordpress/wp-content/themes/projektydlaszkol"
         options: "--delete --asci"
