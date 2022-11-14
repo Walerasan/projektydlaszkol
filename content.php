@@ -34,7 +34,7 @@
 
 
         <div class="btn-box">
-          <a href="http://projektydlaszkol.pl/kontakt/">
+          <a href="http://projektydlaszkol.pl/index.php/kontakt/">
             KONTAKT
           </a>
         </div>
@@ -83,7 +83,7 @@
                           <?php the_content(); ?>
                         </p>
                         <a href="">
-                          REJESTRACJA
+                          WYŚLIJ ZAPYTANIE
                         </a>
 
                       </div>
@@ -116,7 +116,7 @@
               $tablica_realizacje_projekty = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => "projekty",
+                'category_name' => "galeria",
               );
               $arr_posts_projekty = new WP_Query( $tablica_realizacje_projekty );
           ?>
@@ -160,21 +160,11 @@
           <div class="carousel-item active">
             <div class="client_container layout_padding-top">
               <div class="img-box">
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/client-img.png" alt="Projekty dla Szkół">
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo1.jpg" alt="Projekty dla Szkół">
               </div>
               <div class="detail-box">
-                <h5>
-                  Jone Mark
-                </h5>
                 <p>
-                  <img src="<?php echo get_bloginfo('template_directory'); ?>/images/left-quote.png" alt="Projekty dla Szkół">
-                  <span>
-                    Lorem ipsum dolor sit amet,
-                  </span>
-                  <img src="<?php echo get_bloginfo('template_directory'); ?>/images/right-quote.png" alt="Projekty dla Szkół"><br>
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  Unia Europejska
                 </p>
               </div>
             </div>
@@ -182,49 +172,20 @@
 
           <div class="carousel-item">
             <div class="client_container layout_padding-top">
-              <div class="img-box">
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/client-img.png" alt="Projekty dla Szkół">
+              
+            <div class="img-box">
+              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo2.jpg" alt="Projekty dla Szkół">
               </div>
+              
               <div class="detail-box">
-                <h5>
-                  Jone Mark
-                </h5>
                 <p>
-                  <img src="<?php echo get_bloginfo('template_directory'); ?>/images/left-quote.png" alt="Projekty dla Szkół">
-                  <span>
-                    Lorem ipsum dolor sit amet,
-                  </span>
-                  <img src="<?php echo get_bloginfo('template_directory'); ?>/images/right-quote.png" alt="Projekty dla Szkół"><br>
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  Fundusze Europejskie
                 </p>
               </div>
+
             </div>
           </div>
 
-          <div class="carousel-item">
-            <div class="client_container layout_padding-top">
-              <div class="img-box">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/client-img.png" alt="Projekty dla Szkół">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Jone Mark
-                </h5>
-                <p>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/left-quote.png" alt="Projekty dla Szkół">
-                  <span>
-                    Lorem ipsum dolor sit amet,
-                  </span>
-                  <img src="<?php echo get_bloginfo('template_directory'); ?>/images/right-quote.png" alt="Projekty dla Szkół"><br>
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
           <span class="sr-only">Previous</span>
@@ -238,54 +199,3 @@
   </section>
 
   <!-- end client section -->
-
-
-  <!-- contact section -->
-  <section class="contact_section layout_padding-bottom">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="offset-lg-2 col-md-10 offset-md-1">
-          <div class="heading_container">
-            <hr>
-            <h2>
-              Skontaktuj się z nami
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="layout_padding2-top">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
-            
-            <form action="">
-              <div class="contact_form-container">
-                <div>
-                  <div>
-                    <input type="text" placeholder="Full Name" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                  <div>
-                    <input type="text" class="message_input" placeholder="Message" />
-                  </div>
-                  <div>
-                    <button type="submit">
-                      Send
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- end contact section -->

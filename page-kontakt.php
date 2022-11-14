@@ -1,13 +1,22 @@
-<?php
-    echo("
+<?php get_header(); ?>
 
-    Dział Projektów Unijnych<br/>
-    Hydrotrade Polska<br/>
-    ul. Piwowarska 24/5<br/>
-    43-200 Pszczyna<br/>
-    
-    biuro@projektydlaszkol.pl<br/>
-    tel: +48 504 032 040<br/>
-    ");
+<div style="text-align:center">
+    <?php
+        
+        if ( have_posts()) : 
+            while ( have_posts() ) : the_post();
+                
+                the_title( '<h3 style=text-align:center;margin-top:20px;>', '</h3>' );
+                echo("<hr/>");
 
     ?>
+                
+                    <?php the_content(); ?>
+                
+                
+    <?php endwhile; 
+        endif;   
+    ?>
+    
+</div>
+<?php get_footer();?>

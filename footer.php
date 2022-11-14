@@ -10,12 +10,16 @@
       <div class="info_contact">
         <div class="row">
           <div class="col-md-4">
-            <a href="">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/call.png" alt="Projekty dla Szkół">
-              <span>
-                tel. : +48 787 669 653
-              </span>
-            </a>
+            
+            <div>
+              <a href="">
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/call.png" alt="Projekty dla Szkół">
+                <span>
+                  tel. :+48 504 032 040, +48 787 669 653
+                </span>
+              </a>
+            </div>
+        
           </div>
           <div class="col-md-4">
             <a href="">
