@@ -82,7 +82,7 @@
                         <p>
                           <?php the_content(); ?>
                         </p>
-                        <a href="">
+                        <a href="http://projektydlaszkol.pl/index.php/2022/11/14/formularz-bilety-lotnicze/">
                           WYŚLIJ ZAPYTANIE
                         </a>
 
