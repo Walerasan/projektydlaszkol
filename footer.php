@@ -1,5 +1,5 @@
 <!-- info section -->
-
+<div style="width:100%">
 <section class="info_section layout_padding">
     <div class="container">
       <div class="info_logo">
@@ -43,6 +43,7 @@
       <a href="http://projektydlaszkol.pl/">Projekty Dla Szkół, Aplikacje Dla Szkół, Bilety Lotnicze Dla Szkół</a>
     </p>
   </section>
+</div>
   <!-- footer section -->
   <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/bootstrap.js"></script>

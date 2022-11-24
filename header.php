@@ -6,11 +6,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <!-- Site Metas -->
   <meta name="keywords" content="aplikacje dla szkół, projekty dla szkół, erasmus+" />
   <meta name="description" content="Autorskie aplikacje dla dyrektorów szkół, Aplikacje internetowe dla szkół, projekty dla szkół, erasmus+" />
   <meta name="author" content="Walerasan@gmail.com" />
+  <link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/images/airplane_icon-icons.png" sizes="16x16 32x32" type="image/png">
 
   <title>Projekty dla Szkół</title>
 
@@ -23,7 +24,7 @@
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link href="<?php echo get_bloginfo('template_directory'); ?>/css/style.css" rel="stylesheet" type="text/css">
   <!-- responsive style -->
   <link href="<?php echo get_bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet" type="text/css">

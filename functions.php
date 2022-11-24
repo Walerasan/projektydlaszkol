@@ -2,6 +2,14 @@
 /**
  * Projekty Dla Szkół: Walerasan
  */
+
+
+function theme_name_scripts() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() . "/style.css" );
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+
 register_nav_menus( array(
     'main-menu' => 'Primary', //menu główne w topie strony
 ) );
